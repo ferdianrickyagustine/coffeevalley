@@ -104,16 +104,6 @@ class Model {
         }
     }
 
-    static async deleteDistributor(id) {
-        try {
-            const query = `DELETE FROM "Distributors" WHERE id = $1 RETURNING *`
-            const result = await pool.query(query, [id])
-            return result.rows[0]
-        } catch (error) {
-            throw error
-        }
-    }
-
     static async createUpload({ title, document, author }) {
         try {
             const query = `INSERT INTO "Upload" (title, document, author)
