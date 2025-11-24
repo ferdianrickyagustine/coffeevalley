@@ -4,7 +4,7 @@ const { compare } = require("../helpers/bcrypt");
 class Model {
     static async login({ userId, password }) {
         try {
-            const query = `SELECT * FROM "Users" WHERE userid = $1`;
+            const query = `SELECT * FROM "Users" WHERE "userId" = $1`;
             const result = await pool.query(query, [userId]);
 
             if (result.rows.length === 0 || !compare(password, result.rows[0].password)) {
