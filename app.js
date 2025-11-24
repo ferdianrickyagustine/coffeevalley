@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const session = require('express-session');
 const errorHandler = require('./middlewares/errorHandler');
+const authentication = require('./middlewares/authentication');
 const UserController = require('./controllers/UserController');
 const BeanController = require('./controllers/BeanController');
 const DistributorController = require('./controllers/DistributorController');
@@ -27,11 +28,10 @@ app.use(session({
 
 app.post('/login', UserController.login);
 app.post('/logout', UserController.logout);
-
+app.use(authentication);
 app.get('/home', BeanController.getBeanOfTheDay);
 app.get('/catalog', BeanController.getAll);
 app.get('/catalog/:id', BeanController.getById);
-
 app.get('/distributors', DistributorController.getAll);
 app.get('/distributors/:id', DistributorController.getById);
 app.post('/distributors', DistributorController.create);
