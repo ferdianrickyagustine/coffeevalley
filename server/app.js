@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const session = require('express-session');
+const cors = require('cors');
 const errorHandler = require('./middlewares/errorHandler');
 const authentication = require('./middlewares/authentication');
 const UserController = require('./controllers/UserController');
@@ -11,6 +12,11 @@ const upload = require('./middlewares/multer');
 
 const app = express();
 const port = process.env.PORT || 3000;
+
+app.use(cors({
+    origin: 'http://localhost:5173',
+    credentials: true
+}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
