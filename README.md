@@ -1,6 +1,6 @@
 # Coffee Valley
 
-Backend API untuk Coffee Valley - aplikasi manajemen coffee beans, distributors, dan uploads.
+Backend API untuk Coffee Valley
 
 ## Tech Stack
 
