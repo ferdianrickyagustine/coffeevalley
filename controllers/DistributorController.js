@@ -16,7 +16,7 @@ class DistributorController {
             const distributor = await Model.getDistributorById(id);
             
             if (!distributor) {
-                return res.status(404).json({ message: "Distributor not found" });
+                throw { name: "NotFound", message: "Distributor not found" };
             }
             
             res.status(200).json(distributor);
@@ -30,9 +30,7 @@ class DistributorController {
             const { name, city, state, country, phone, email } = req.body;
             
             if (!name || !city || !country || !phone || !email) {
-                return res.status(400).json({ 
-                    message: "name, city, country, phone, and email are required" 
-                });
+                throw { name: "BadRequest", message: "Distributor name, city, country, phone, and email are required" };
             }
             
             const distributor = await Model.createDistributor({ 
@@ -51,9 +49,7 @@ class DistributorController {
             const { name, city, state, country, phone, email } = req.body;
             
             if (!name || !city || !country || !phone || !email) {
-                return res.status(400).json({ 
-                    message: "name, city, country, phone, and email are required" 
-                });
+                throw { name: "BadRequest", message: "Distributor name, city, country, phone, and email are required" };
             }
             
             const distributor = await Model.updateDistributor(id, { 
@@ -61,7 +57,7 @@ class DistributorController {
             });
             
             if (!distributor) {
-                return res.status(404).json({ message: "Distributor not found" });
+                throw { name: "NotFound", message: "Distributor not found" };
             }
             
             res.status(200).json(distributor);

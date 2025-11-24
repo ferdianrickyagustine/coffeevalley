@@ -16,7 +16,7 @@ class BeanController {
             const bean = await Model.getBeanById(id);
             
             if (!bean) {
-                return res.status(404).json({ message: "Bean not found" });
+                throw { name: "NotFound", message: "Bean not found" };
             }
             
             res.status(200).json(bean);
@@ -30,7 +30,7 @@ class BeanController {
             const bean = await Model.getBeanOfTheDay();
             
             if (!bean) {
-                return res.status(404).json({ message: "No bean of the day available" });
+                throw { name: "NotFound", message: "No bean of the day available" };
             }
             
             res.status(200).json(bean);

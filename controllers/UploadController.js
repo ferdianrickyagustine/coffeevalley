@@ -6,13 +6,11 @@ class UploadController {
             const { title, author } = req.body;
             
             if (!title || !author) {
-                return res.status(400).json({ 
-                    message: "title and author are required" 
-                });
+                throw { name: "BadRequest", message: "Title and Author are required" };
             }
             
             if (!req.file) {
-                return res.status(400).json({ message: "Document file is required" });
+                throw { name: "BadRequest", message: "Document file is required" };
             }
             
             const document = req.file.filename;

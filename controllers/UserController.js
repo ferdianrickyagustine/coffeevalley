@@ -6,7 +6,7 @@ class UserController {
             const { userId, password } = req.body;
             
             if (!userId || !password) {
-                return res.status(400).json({ message: "userId and password are required" });
+                throw { name: "BadRequest", message: "userId and password are required" };
             }
 
             const user = await Model.login({ userId, password });
