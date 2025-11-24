@@ -1,11 +1,11 @@
 const pool = require("../config");
 
 async function setup() {
-    let queryDelete = `DROP TABLE IF EXISTS "Distributor" CASCADE`
+    let queryDelete = `DROP TABLE IF EXISTS "Distributors" CASCADE`
 
-    let queryDistributor = `CREATE TABLE IF NOT EXISTS "Distributor" (
+    let queryDistributor = `CREATE TABLE IF NOT EXISTS "Distributors" (
                         id SERIAL PRIMARY KEY,
-                        distributor_name VARCHAR NOT NULL,
+                        name VARCHAR NOT NULL,
                         city VARCHAR NOT NULL,
                         state VARCHAR,
                         country VARCHAR NOT NULL,
@@ -14,9 +14,9 @@ async function setup() {
                         )`
 
     await pool.query(queryDelete)
-    console.log("Successfully Delete Distributor Table");
+    console.log("Successfully Delete Distributors Table");
     await pool.query(queryDistributor)
-    console.log("Successfully Create Distributor Table")
+    console.log("Successfully Create Distributors Table")
 }
 
 module.exports = setup

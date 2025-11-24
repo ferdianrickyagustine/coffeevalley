@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "distributor_name": "Beans R Us",
+    "name": "Beans R Us",
     "city": "Brisbane",
     "state": "QLD",
     "country": "Australia",
@@ -10,7 +10,7 @@
   },
   {
     "id": 2,
-    "distributor_name": "The Buzz",
+    "name": "The Buzz",
     "city": "Munich",
     "state": "Bavaria",
     "country": "Germany",
@@ -19,7 +19,7 @@
   },
   {
     "id": 3,
-    "distributor_name": "Coffee Galore",
+    "name": "Coffee Galore",
     "city": "Capitale ave den Ursel",
     "state": "DF",
     "country": "Brazil",
@@ -28,7 +28,7 @@
   },
   {
     "id": 4,
-    "distributor_name": "Perk Plus",
+    "name": "Perk Plus",
     "city": "Salem",
     "state": "OR",
     "country": "USA",
@@ -37,7 +37,7 @@
   },
   {
     "id": 5,
-    "distributor_name": "Cafe Columbian",
+    "name": "Cafe Columbian",
     "city": "Hawthorne",
     "state": "Cundinamarca",
     "country": "Colombia",
@@ -46,7 +46,7 @@
   },
   {
     "id": 6,
-    "distributor_name": "Jumpin' Java",
+    "name": "Jumpin' Java",
     "city": "Sydney",
     "state": "NSW",
     "country": "Australia",
@@ -55,7 +55,7 @@
   },
   {
     "id": 7,
-    "distributor_name": "Coffee 2000",
+    "name": "Coffee 2000",
     "city": "Munich",
     "state": "Bavaria",
     "country": "Germany",
@@ -64,7 +64,7 @@
   },
   {
     "id": 8,
-    "distributor_name": "The Whole Bean",
+    "name": "The Whole Bean",
     "city": "Ashro",
     "state": "Hokkaido",
     "country": "Japan",
@@ -73,7 +73,7 @@
   },
   {
     "id": 9,
-    "distributor_name": "Roast Resellers",
+    "name": "Roast Resellers",
     "city": "Vancouver",
     "state": "BC",
     "country": "Canada",
