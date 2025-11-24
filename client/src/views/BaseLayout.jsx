@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 
 export default function BaseLayout() {
   const navigate = useNavigate();
-  const [isLoading, setIsLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     checkAuth();
@@ -18,14 +18,14 @@ export default function BaseLayout() {
       await axios.get("http://localhost:3000/home", {
         withCredentials: true
       });
-      setIsLoading(false);
+      setLoading(false);
     } catch (error) {
       toast.error("Please login first");
       navigate("/login");
     }
   }
 
-  if (isLoading) {
+  if (loading) {
     return (
       <div className="flex items-center justify-center h-screen">
         <p>Loading...</p>
