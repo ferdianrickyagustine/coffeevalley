@@ -3,6 +3,9 @@ import { ToastContainer } from "react-toastify";
 import LoginPage from "./views/LoginPage";
 import HomePage from "./views/HomePage";
 import CatalogPage from "./views/CatalogPage";
+import DistributorPage from "./views/DistributorPage";
+import AddDistributorPage from "./views/AddDistributorPage";
+import EditDistributorPage from "./views/EditDistributorPage";
 import BaseLayout from "./views/BaseLayout";
 
 export default function App() {
@@ -15,6 +18,9 @@ export default function App() {
         <Route element={<BaseLayout />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/catalog" element={<CatalogPage />} />
+          <Route path="/distributors" element={<DistributorPage />} />
+          <Route path="/distributors/add" element={<AddDistributorPage />} />
+          <Route path="/distributors/edit/:id" element={<EditDistributorPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
