@@ -7,6 +7,7 @@ import DistributorPage from "./views/DistributorPage";
 import AddDistributorPage from "./views/AddDistributorPage";
 import EditDistributorPage from "./views/EditDistributorPage";
 import BaseLayout from "./views/BaseLayout";
+import UploadPage from "./views/UploadPage";
 
 export default function App() {
 
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/distributors" element={<DistributorPage />} />
           <Route path="/distributors/add" element={<AddDistributorPage />} />
           <Route path="/distributors/edit/:id" element={<EditDistributorPage />} />
+          <Route path="/upload" element={<UploadPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
