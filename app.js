@@ -27,11 +27,15 @@ app.use(session({
 }));
 
 app.post('/login', UserController.login);
-app.post('/logout', UserController.logout);
+
 app.use(authentication);
+
+app.post('/logout', UserController.logout);
+
 app.get('/home', BeanController.getBeanOfTheDay);
 app.get('/catalog', BeanController.getAll);
 app.get('/catalog/:id', BeanController.getById);
+
 app.get('/distributors', DistributorController.getAll);
 app.get('/distributors/:id', DistributorController.getById);
 app.post('/distributors', DistributorController.create);

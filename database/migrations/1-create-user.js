@@ -5,7 +5,7 @@ async function setup() {
 
     let queryUsers = `CREATE TABLE IF NOT EXISTS "Users" (
                         id SERIAL PRIMARY KEY,
-                        userId VARCHAR NOT NULL UNIQUE,
+                        "userId" VARCHAR NOT NULL UNIQUE,
                         password VARCHAR NOT NULL
                         )`
 

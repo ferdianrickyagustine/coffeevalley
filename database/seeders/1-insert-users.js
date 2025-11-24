@@ -8,7 +8,7 @@ async function seed() {
     const usersJson = await fs.readFile(filePath, "utf-8");
     let usersParsed = JSON.parse(usersJson)
     
-    let query = `INSERT INTO "Users" (userId, password) VALUES \n`
+    let query = `INSERT INTO "Users" ("userId", password) VALUES \n`
     let users = usersParsed.map(user => {
         const hashedPassword = bcrypt.hashSync(user.password, 10);
         return `('${user.userId}', '${hashedPassword}')`

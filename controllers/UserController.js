@@ -11,8 +11,15 @@ class UserController {
 
             const user = await Model.login({ userId, password });
             
+            console.log('User object from Model.login:', user);
+            
             req.session.userDbId = user.id;
             req.session.userId = user.userId;
+            
+            console.log('Session after setting:', {
+                userDbId: req.session.userDbId,
+                userId: req.session.userId
+            });
             
             res.status(200).json({ 
                 message: "Login successful",
@@ -34,6 +41,8 @@ class UserController {
                 }
                 res.status(200).json({ message: "Logout successful" });
             });
+            console.log("Logout successful")
+
         } catch (error) {
             next(error);
         }
