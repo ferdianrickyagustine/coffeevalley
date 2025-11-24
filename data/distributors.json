@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "distributor_name": "Beans R Us",
+    "city": "Brisbane",
+    "state": "QLD",
+    "country": "Australia",
+    "phone": "+61 7 3123 4567",
+    "email": "info@beansrus.com.au"
+  },
+  {
+    "id": 2,
+    "distributor_name": "The Buzz",
+    "city": "Munich",
+    "state": "Bavaria",
+    "country": "Germany",
+    "phone": "+49 89 1234 5678",
+    "email": "contact@thebuzz.de"
+  },
+  {
+    "id": 3,
+    "distributor_name": "Coffee Galore",
+    "city": "Capitale ave den Ursel",
+    "state": "DF",
+    "country": "Brazil",
+    "phone": "+55 61 3456 7890",
+    "email": "contato@coffeegalore.com.br"
+  },
+  {
+    "id": 4,
+    "distributor_name": "Perk Plus",
+    "city": "Salem",
+    "state": "OR",
+    "country": "USA",
+    "phone": "(503) 555-1234",
+    "email": "sales@perkplus.com"
+  },
+  {
+    "id": 5,
+    "distributor_name": "Cafe Columbian",
+    "city": "Hawthorne",
+    "state": "Cundinamarca",
+    "country": "Colombia",
+    "phone": "+57 1 234 5678",
+    "email": "ventas@cafecolumbian.co"
+  },
+  {
+    "id": 6,
+    "distributor_name": "Jumpin' Java",
+    "city": "Sydney",
+    "state": "NSW",
+    "country": "Australia",
+    "phone": "+61 2 9876 5432",
+    "email": "hello@jumpinjava.com.au"
+  },
+  {
+    "id": 7,
+    "distributor_name": "Coffee 2000",
+    "city": "Munich",
+    "state": "Bavaria",
+    "country": "Germany",
+    "phone": "+49 89 9876 5432",
+    "email": "info@coffee2000.de"
+  },
+  {
+    "id": 8,
+    "distributor_name": "The Whole Bean",
+    "city": "Ashro",
+    "state": "Hokkaido",
+    "country": "Japan",
+    "phone": "+81 3 1234 5678",
+    "email": "info@thewholebean.jp"
+  },
+  {
+    "id": 9,
+    "distributor_name": "Roast Resellers",
+    "city": "Vancouver",
+    "state": "BC",
+    "country": "Canada",
+    "phone": "+1 604 555 9876",
+    "email": "hello@roastresellers.ca"
+  }
+]
