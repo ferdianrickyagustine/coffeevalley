@@ -1,27 +1,27 @@
-const errorHandler = (err, req, res, next) => {
-    console.log(err);
+const errorHandler = (error, req, res, next) => {
+    console.log(error);
     
     let status = 500;
     let message = 'Internal server error';
 
-    if (err.code === 'LIMIT_FILE_SIZE') {
+    if (error.code === 'LIMIT_FILE_SIZE') {
         status = 400;
         message = 'File maksimal berukuran 5MB';
     }
 
-    if (err.name === 'BadRequest') {
+    if (error.name === 'BadRequest') {
         status = 400;
-        message = err.message;
+        message = error.message;
     }
 
-    if (err.name === 'Unauthorized') {
+    if (error.name === 'Unauthorized') {
         status = 401;
         message = 'Invalid User ID or Password';
     }
 
-    if (err.name === 'NotFound') {
+    if (error.name === 'NotFound') {
         status = 404;
-        message = err.message;
+        message = error.message;
     }
 
     res.status(status).json({
