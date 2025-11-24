@@ -11,8 +11,8 @@ class UserController {
 
             const user = await Model.login({ userId, password });
             
+            req.session.userDbId = user.id;
             req.session.userId = user.userId;
-            req.session.id = user.id;
             
             res.status(200).json({ 
                 message: "Login successful",
